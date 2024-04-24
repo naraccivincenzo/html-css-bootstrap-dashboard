@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap start -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- bootstrap end -->
+    <!-- google fonts start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- google fonts end -->
+    <!-- bootstrap icons start -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- bootstrap icons end -->
+    <!-- css start -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- css end -->
+    <title>Bootstrap Dashboard</title>
+</head>
+
+<body>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-md bg-body-tertiary pb-0" data-bs-theme="dark">
+        <div class="container-fluid ps-0">
+            <nav class="navbar bg-body-tertiary p-0">
+                <div class="container">
+                    <a class="navbar-brand m-0" href="#">
+                        <img src="img/duck.png" alt="duck" width="25" height="25">
+                    </a>
+                </div>
+            </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between pb-2" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Anagrafica Utenti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Storico Prezzi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Help</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 bg-light" type="search" placeholder="Cerca" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-9">
+                <!--header start  -->
+                <header class="container-fluid d-flex d-flex justify-content-between p-3">
+                    <h5 class="m-0">Catalogo Libri</h5>
+                    <button type="button" class="btn btn-primary btn-sm">Aggiungi Libro</button>
+                </header>
+                <!--header end  -->
+                <!--main start  -->
+                <main class="container-fluid p-3">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Titolo</th>
+                                <th scope="col" class="d-none d-sm-block">Data prestito</th>
+                                <th scope="col">Stato</th>
+                                <th scope="col">Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="fw-normal">I pilastri della terra</th>
+                                <td class="d-none d-sm-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Basic outlined example">
+                                        <button type="button" class="btn btn-outline-secondary bi bi-pencil"></button>
+                                        <button type="button" class="btn btn-outline-secondary bi bi-trash"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">I promessi sposi</th>
+                                <td class="d-none d-sm-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Basic outlined example">
+                                        <button type="button" class="btn btn-outline-secondary bi bi-pencil"></button>
+                                        <button type="button" class="btn btn-outline-secondary bi bi-trash"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">Il signore degli anelli</th>
+                                <td class="d-none d-sm-table-cell">18/10/2023</td>
+                                <td>
+                                    <span class="badge text-bg-warning">In prestito</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Basic outlined example">
+                                        <button type="button" class="btn btn-outline-secondary bi bi-pencil"></button>
+                                        <button type="button" class="btn btn-outline-secondary bi bi-trash"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">Harry Potter e la pietra filosofale</th>
+                                <td class="d-none d-sm-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Basic outlined example">
+                                        <button type="button" class="btn btn-outline-secondary bi bi-pencil"></button>
+                                        <button type="button" class="btn btn-outline-secondary bi bi-trash"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">Il codice Da Vinci</th>
+                                <td class="d-none d-sm-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-danger">Non disponibile</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Basic outlined example">
+                                        <button type="button" class="btn btn-outline-secondary bi bi-pencil"></button>
+                                        <button type="button" class="btn btn-outline-secondary bi bi-trash"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">Shining</th>
+                                <td class="d-none d-sm-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Basic outlined example">
+                                        <button type="button" class="btn btn-outline-secondary bi bi-pencil"></button>
+                                        <button type="button" class="btn btn-outline-secondary bi bi-trash"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">La divina commedia</th>
+                                <td class="d-none d-sm-table-cell">21/09/2023</td>
+                                <td>
+                                    <span class="badge text-bg-warning">In prestito</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Basic outlined example">
+                                        <button type="button" class="btn btn-outline-secondary bi bi-pencil"></button>
+                                        <button type="button" class="btn btn-outline-secondary bi bi-trash"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">Il trono di spade</th>
+                                <td class="d-none d-sm-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Basic outlined example">
+                                        <button type="button" class="btn btn-outline-secondary bi bi-pencil"></button>
+                                        <button type="button" class="btn btn-outline-secondary bi bi-trash"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">Il mondo di Sofia</th>
+                                <td class="d-none d-sm-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-danger">Non disponibile</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Basic outlined example">
+                                        <button type="button" class="btn btn-outline-secondary bi bi-pencil"></button>
+                                        <button type="button" class="btn btn-outline-secondary bi bi-trash"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">Le Cronache di Narnia: il leone, la strega e l'armadio
+                                </th>
+                                <td class="d-none d-sm-table-cell">25/07/2023</td>
+                                <td>
+                                    <span class="badge text-bg-warning">In prestito</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Basic outlined example">
+                                        <button type="button" class="btn btn-outline-secondary bi bi-pencil"></button>
+                                        <button type="button" class="btn btn-outline-secondary bi bi-trash"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">Il piccolo principe</th>
+                                <td class="d-none d-sm-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Basic outlined example">
+                                        <button type="button" class="btn btn-outline-secondary bi bi-pencil"></button>
+                                        <button type="button" class="btn btn-outline-secondary bi bi-trash"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">La storia infinita</th>
+                                <td class="d-none d-sm-table-cell">-</td>
+                                <td>
+                                    <span class="badge text-bg-success">Disponibile</span>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group"
+                                        aria-label="Basic outlined example">
+                                        <button type="button" class="btn btn-outline-secondary bi bi-pencil"></button>
+                                        <button type="button" class="btn btn-outline-secondary bi bi-trash"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </main>
+            </div>
+            <!-- todo start -->
+            <div class="col-12 col-md-3 p-3">
+                <table class="table border">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="fw-normal bg-body-secondary">Todo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value=""
+                                            id="firstCheckbox">
+                                        <label class="form-check-label fw-normal" for="firstCheckbox">Chiamare
+                                            segreteria</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value=""
+                                            id="secondCheckbox">
+                                        <label class="form-check-label fw-normal" for="secondCheckbox">Mandare avvisi
+                                            prestiti
+                                            scaduti</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value=""
+                                            id="thirdCheckbox">
+                                        <label class="form-check-label fw-normal" for="thirdCheckbox">Ordinare nuovi
+                                            libri</label>
+                                    </li>
+                                </ul>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- todo end -->
+                <!-- faq start -->
+                <table class="table border">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="fw-normal bg-body-secondary">F.A.Q.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item border-0 border-bottom">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                aria-expanded="false" aria-controls="collapseOne">
+                                                Come aggiungere un nuono libro?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum unde
+                                                maxime
+                                                quaerat minus sapiente possimus doloremque dignissimos necessitatibus
+                                                molestiae,
+                                                fuga id expedita facere, iste similique molestias aliquid? Eligendi,
+                                                ipsum
+                                                velit!
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 border-bottom">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                Come posso accedere all'anagrafica utenti?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum dolor
+                                                aut
+                                                dolores unde quaerat. Obcaecati, alias iste at temporibus eum fuga ad
+                                                sapiente
+                                                laudantium quaerat sequi beatae voluptatem suscipit esse.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Come posso usare questa dashboard da mobile?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam,
+                                                inventore
+                                                commodi? Reprehenderit quo repudiandae fuga animi, modi pariatur nemo
+                                                earum,
+                                                qui,
+                                                eos necessitatibus totam eius dolorum ducimus odit commodi explicabo?
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- faq end -->
+        </div>
+    </div>
+    </div>
+    <!--bootstrap js start -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <!--bootstrap js end -->
+</body>
+
+</html>
