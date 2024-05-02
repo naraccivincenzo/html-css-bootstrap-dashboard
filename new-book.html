@@ -42,7 +42,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Catalogo Libri</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Anagrafica Utenti</a>
@@ -62,29 +62,35 @@
         <h1>Nuovo Libro</h1>
     </header>
     <!-- form start -->
-    <form class="container-fluid w-75 p-3" action="">
+    <form class="container-fluid w-75 p-3">
         <div class="row">
             <!-- author name start -->
             <div class="mb-3 col-6">
                 <label for="author-name" class="form-label fw-bold text-nowrap">Nome Autore</label>
-                <input type="text" class="form-control" id="author-name" placeholder="Inserisci il nome dell'autore">
+                <input type="text" class="form-control" id="author-name" name="author-name"
+                    placeholder="Inserisci il nome dell'autore">
             </div>
             <!-- author name end -->
             <!-- author surname start -->
             <div class="mb-3 col-6">
                 <label for="author-surname" class="form-label fw-bold text-nowrap">Cognome Autore</label>
-                <input type="text" class="form-control" id="author-surname"
+                <input type="text" class="form-control" id="author-surname" name="author-surname"
                     placeholder="Inserisci il cognome dell'autore">
             </div>
             <!-- author surname end -->
+        </div>
+        <!-- title start -->
+        <div class="row">
             <div class="mb-3">
                 <label for="title" class="form-label fw-bold">Titolo</label>
-                <input type="text" class="form-control" id="title" placeholder="Inserisci il titolo del libro">
+                <input type="text" class="form-control" id="title" name="title"
+                    placeholder="Inserisci il titolo del libro">
             </div>
+            <!-- title end -->
             <!-- genre select start -->
             <div class=" mb-3 col-sm-12 col-md-4">
                 <label for="genre" class="form-label fw-bold">Genere</label>
-                <select class="form-select" aria-label="Default select example" id="genre">
+                <select class="form-select" aria-label="Default select example" name="genre" id="genre">
                     <option selected>Scegli il genere</option>
                     <option value="1">Avventura</option>
                     <option value="2">Giallo</option>
@@ -95,33 +101,34 @@
             <!-- publish year start -->
             <div class="mb-3 col-sm-12 col-md-4">
                 <label for="year" class="form-label fw-bold">Anno di Pubblicazione</label>
-                <input type="number" class="form-control" id="year" min="1450" step="1" placeholder="Inserisci l'anno">
+                <input type="date" class="form-control" id="year" name="year">
             </div>
             <!-- publish year end -->
             <!-- isbn start -->
             <div class="mb-3 col-sm-12 col-md-4">
                 <label for="isbn" class="form-label fw-bold">ISBN#</label>
-                <input type="text" class="form-control" id="isbn" min="10" max="13"
-                    placeholder="Inserisci il codice ISBN#">
+                <input type="text" class="form-control" id="isbn" name="isbn" placeholder="Inserisci il codice ISBN#">
             </div>
             <!-- isbn end -->
-            <!-- note start -->
-            <hr class="mb-3 mt-3">
+        </div>
+        <!-- note start -->
+        <hr class="my-4">
+        <div class="row">
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label fw-bold">Note</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="note"
                     placeholder="Inserisci eventuali note sul libro"></textarea>
             </div>
             <!-- note end -->
-            <!-- digital availability start -->
-            <div class="form-check ms-3 mb-3">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label fw-bold" for="flexCheckDefault">
-                    Disponibile anche in digitale
-                </label>
-            </div>
-            <!-- digital availability end -->
         </div>
+        <!-- digital availability start -->
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="digital-availability">
+            <label class="form-check-label fw-bold" for="flexCheckDefault">
+                Disponibile anche in digitale
+            </label>
+        </div>
+        <!-- digital availability end -->
         <!-- form submit button start -->
         <button type="submit" class="btn btn-primary">Aggiungi Libro</button>
         <!-- form submit button end -->
